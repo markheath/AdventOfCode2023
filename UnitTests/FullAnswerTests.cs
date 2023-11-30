@@ -22,6 +22,6 @@ public class FullAnswerTests
             return;
         }
         var solution = solver.Solve(input);
-        Assert.AreEqual(solver.ExpectedResult, solution);
+        Assert.That(solution, Is.EqualTo(solver.ExpectedResult));
     }
 }

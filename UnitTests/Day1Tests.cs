@@ -11,6 +11,6 @@ public class Day1Tests
         var testInput = @"".Split("\r\n");
         var solver = new Day1();
         var solution = solver.Solve(testInput);
-        Assert.AreEqual(("", ""), solution);
+        Assert.That(solution, Is.EqualTo(("", "")));
     }
 }
