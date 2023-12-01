@@ -15,6 +15,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnitTests", "UnitTests\Unit
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Input", "Input", "{7395B54E-1741-488C-BBFD-9D6D135C6F0F}"
 	ProjectSection(SolutionItems) = preProject
+		Input\Day1.txt = Input\Day1.txt
 	EndProjectSection
 EndProject
 Global
