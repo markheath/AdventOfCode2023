@@ -1,11 +1,23 @@
-﻿namespace AdventOfCode2023;
+﻿using System.Text.RegularExpressions;
+
+namespace AdventOfCode2023;
 
 public class Day2 : ISolver
 {
-    public (string, string) ExpectedResult => ("", "");
+    public (string, string) ExpectedResult => ("2528", "");
 
     public (string, string) Solve(string[] input)
     {
-        throw new NotImplementedException();
+        var part1 = 0;
+        foreach(var game in input)
+        {
+            var gameNumber = int.Parse(Regex.Match(game, @"Game (\d+)").Groups[1].Value);
+            var max = Regex.Matches(game, @"(\d+) (\w+)")
+                 .ToDictionaryWithCombiner(m => m.Groups[2].Value,
+                    m => int.Parse(m.Groups[1].Value), Math.Max);
+            var possible = max["red"] <= 12 && max["green"] <= 13 && max["blue"] <= 14;
+            if (possible) part1 += gameNumber;           
+        }
+        return (part1.ToString(), "");
     }
 }
