@@ -21,7 +21,7 @@ public class Day3Tests
 .664.598..".Split(Environment.NewLine);
         var solver = new Day3();
         var solution = solver.Solve(testInput);
-        Assert.That(solution, Is.EqualTo(("4361", "")));
+        Assert.That(solution, Is.EqualTo(("4361", "467835")));
     }
 }
 
