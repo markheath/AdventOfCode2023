@@ -17,7 +17,7 @@ Card 5: 87 83 26 28 32 | 88 30 70 12 93 22 82 36
 Card 6: 31 18 13 56 72 | 74 77 10 23 35 67 36 11".Split(Environment.NewLine);
         var solver = new Day4();
         var solution = solver.Solve(testInput);
-        Assert.That(solution, Is.EqualTo(("13", "")));
+        Assert.That(solution, Is.EqualTo(("13", "30")));
     }
 }
 
